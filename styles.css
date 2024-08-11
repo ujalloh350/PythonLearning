@@ -1,0 +1,35 @@
+/*
+1.USE A MORE INTUITIVE BOX-SIZING MODEL.
+*/
+*, *::before, ::after{
+    box-sizing: border-box;
+}
+/*RMOVE DEFAULT MARGIN */
+* {
+    margin: 0;
+}
+/*TYPOGRAPHIC TWEAKS!
+3.ADD ACCESSIBLE LINE-HEIGHT
+4.IMPROVE TEXT RENDERING
+*/
+body{
+    line-height: 1.5;
+    -webkit-font-smoothing:antialiased;
+}
+/*IMPROVE MEDIA DEFAULTS */
+img,picture,video,canvas,svg{
+    display: block;
+    max-width: 100%;
+}
+/*REMOVE BUILT-IN FORM TYPOGRAPHY STYLES*/
+input,button,textarea,select{
+    font:inherit;
+}
+/*AVOID TEXT OVERFLOW */
+p,h1,h2,h3,h4,h5,h6{
+    overflow-wrap: break-word;
+}
+/*CREATE ROOT STACKING CONTEXT*/
+#root ,#__next{
+    isolation: isolate;
+}
